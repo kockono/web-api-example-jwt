@@ -23,7 +23,7 @@ namespace primerWebApi
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddControllers();
-            // Apartir de aquí se agrega el código para JWT
+            // Apartir de aquí se agrega el código para JWT --------------------------------------------------------------------------------------------------------------------------------------------------------------
             services.AddAuthentication(options =>
             {
                 options.DefaultAuthenticateScheme = JwtBearerDefaults.AuthenticationScheme;
@@ -41,7 +41,7 @@ namespace primerWebApi
                     IssuerSigningKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes("my_secret_key_12345"))
                 };
             });
-            // Hasta aquí termina
+            // Hasta aquí termina --------------------------------------------------------------------------------------------------------------------------------------------------------------
             
         }
 
